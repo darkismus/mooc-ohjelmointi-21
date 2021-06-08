@@ -1,1 +1,9 @@
 # Kirjoita ratkaisu tähän
+luku = int(input("Anna luku: "))
+
+
+
+for i in range(-(luku), luku):
+    if i != 0:
+        print(i)
+print(luku)
