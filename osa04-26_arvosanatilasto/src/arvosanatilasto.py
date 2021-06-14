@@ -77,7 +77,7 @@ def tulosta(pisteytys_lista : list):
     print("Arvosanajakauma: ")
 
     for i in pisteytys_lista[0]:
-        
+
 
 
 
@@ -115,6 +115,8 @@ def muotoile_arvosana(yhteispisteet : int):
         arvosana = 4
     elif yhteispisteet >= 28 and yhteispisteet < 30:
         arvosana = 5
+
+    # Oikeastaan sortattu lista olisi JEES JEES!
     return arvosana
 
 
