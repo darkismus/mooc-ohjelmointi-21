@@ -21,25 +21,23 @@ def siivoa_syotteet(lista : list):
     return siivottu_lista
 
 def pisteet(lista : list):
-    hyvaksytty = []
     pisteet = []
-    palautuslista = []
+
     for i in lista:
         hpisteet = muotoile_harjoituspisteet(int(i[1])) 
-
+        apulista = []
         if int(i[0]) < 10:
-            hyvaksytty.append(False)
-            pisteet.append(int(i[0]) + hpisteet)
+            apulista.append(0)
+            apulista.append(int(i[0]) + hpisteet)
         elif int(i[0]) + hpisteet < 15:
-            hyvaksytty.append(False)
-            pisteet.append(int(i[0]) + hpisteet)
+            apulista.append(0)
+            apulista.append(int(i[0]) + hpisteet)
         else:
-            hyvaksytty.append(True)
-            pisteet.append(int(i[0]) + hpisteet)
-    palautuslista.append(hyvaksytty)
-    palautuslista.append(pisteet)
+            apulista.append(1)
+            apulista.append(int(i[0]) + hpisteet)
+        pisteet.append(apulista)
 
-    return palautuslista
+    return pisteet
 
 def muotoile_harjoituspisteet(harjoituspisteet : int):
     todelliset_pisteet = 0
@@ -70,23 +68,29 @@ def muotoile_harjoituspisteet(harjoituspisteet : int):
 
 def tulosta(pisteytys_lista : list):
     print("Tilasto:")
-    ka = keskiarvo(pisteytys_lista[1])
+    ka = keskiarvo(pisteytys_lista)
     print(f"Pisteiden keskiarvo: {ka}")
-    hyvaksymiset = hyvaksytyt(pisteytys_lista[0])
-    print(f"Hyväksymisprosentti: {hyvaksymiset}")
+    hyvaksymiset = hyvaksytyt(pisteytys_lista)
+    print(f"Hyväksymisprosentti: {hyvaksymiset:.1f}")
     print("Arvosanajakauma: ")
+    arvosanalista = luo_arvosana_lista(pisteytys_lista)
 
-    for i in pisteytys_lista[0]:
+    #print(arvosanalista)
+    apumuuttuja = 5
 
-
-
-
+    while apumuuttuja >= 0:
+        print(f"  {apumuuttuja}: ",end="")
+        for i in arvosanalista:
+            if i == apumuuttuja:
+                print("*",end="")
+        print("")
+        apumuuttuja -= 1
     
 def keskiarvo(pisteet_lista : list):
     summa = 0
     ka = 0
     for i in pisteet_lista:
-        summa += i
+        summa += i[1]
     ka = summa / len(pisteet_lista)
 
     return ka
@@ -94,13 +98,23 @@ def keskiarvo(pisteet_lista : list):
 def hyvaksytyt(hyvaksymis_lista : list):
     montako = 0
     for i in hyvaksymis_lista:
-        if i:
+        if i[0]:
             montako += 1
     
     return montako / len(hyvaksymis_lista) * 100
 
+def luo_arvosana_lista(pisteytys_lista):
+    arvosanalista = []
 
-def muotoile_arvosana(yhteispisteet : int):
+    for i in pisteytys_lista:
+        if i[0]:
+            arvosanalista.append(anna_arvosana(i[1]))
+        else:
+            arvosanalista.append(0)
+        arvosanalista.sort(reverse=True)
+    return arvosanalista
+
+def anna_arvosana(yhteispisteet : int):
 
     arvosana = 0
     if yhteispisteet >= 0 and yhteispisteet< 15:
@@ -113,20 +127,28 @@ def muotoile_arvosana(yhteispisteet : int):
         arvosana = 3
     elif yhteispisteet >= 24 and yhteispisteet < 28:
         arvosana = 4
-    elif yhteispisteet >= 28 and yhteispisteet < 30:
+    elif yhteispisteet >= 28 and yhteispisteet <= 30:
         arvosana = 5
 
     # Oikeastaan sortattu lista olisi JEES JEES!
     return arvosana
 
 
-syotteet = valmis_lista()
+# syotteet = valmis_lista()
 
-print(syotteet)
+syotteet = lue_kayttajalta()
 
-ssyotteet = siivoa_syotteet(syotteet)
+# syotteet = ["20 100"]
 
-pisteytys = pisteet(ssyotteet)
+#print(syotteet)
+
+syotteet = siivoa_syotteet(syotteet)
+
+#print(syotteet)
+
+pisteytys = pisteet(syotteet)
+
+#print(pisteytys)
 
 tulosta(pisteytys)
 
