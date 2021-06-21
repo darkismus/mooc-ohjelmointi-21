@@ -32,3 +32,4 @@ if __name__ == "__main__":
 
     print(sarake_oikein(sudoku, 0))
     print(sarake_oikein(sudoku, 1))
+    
