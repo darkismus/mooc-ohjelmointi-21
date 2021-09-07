@@ -8,7 +8,7 @@ from inspect import getsource
 exercise = 'src.kahden_potenssit'
 
 @points('3.kahden_potenssit')
-class LuvutTest(unittest.TestCase):
+class KahdenPotenssitTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         with patch('builtins.input', side_effect=["3"] * 10):

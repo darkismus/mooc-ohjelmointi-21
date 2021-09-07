@@ -5,7 +5,7 @@ checksum = 'a040ecf48b3b6fe20cf2f3c8fe6efbe4'
 
 [exercises.osa03-01_lahtolaskenta]
 id = 115326
-checksum = '94470afe70917adab90c23fddee9d650'
+checksum = 'f183bb4dc910fe0a7d356de91d7776ee'
 
 [exercises.osa03-02_luvut]
 id = 115327
@@ -13,7 +13,7 @@ checksum = 'd2a7f8756d2e9be15d695fcb0102879e'
 
 [exercises.osa03-03_kahden_potenssit]
 id = 115328
-checksum = '35e2c0d21076cd8e067401242dd6a3ad'
+checksum = '7cf9c3e12acccf6cf58a4d7174555aba'
 
 [exercises.osa03-04_luvun_n_potenssit]
 id = 115329
@@ -29,7 +29,7 @@ checksum = 'c4128f7196035e051cbe8dd0167462d7'
 
 [exercises.osa03-05a_monistetut_jonot]
 id = 115332
-checksum = 'f20b579f54f0acba36d8a81100196185'
+checksum = '47854dacc4a9c9757e4a16f87637762c'
 
 [exercises.osa03-05b_pidempi_jono]
 id = 115333
@@ -165,7 +165,7 @@ checksum = '3f2421c0c4d4af11fc48671b77cc8a9b'
 
 [exercises.osa04-04_joulukuusi]
 id = 115363
-checksum = '03867f380d64a4d67a197ecc0801aec1'
+checksum = 'c5c1dcbc98a13b98838049f9ddea49c9'
 
 [exercises.osa04-05_luvuista_suurin]
 id = 115364
@@ -394,3 +394,79 @@ checksum = '18650cdf3cee9bad2dc0266f99782605'
 [exercises.osa05-21_kirjainruudukko]
 id = 115418
 checksum = '7db163397fafb0234836d350ca7ebd28'
+
+[exercises.osa06-01_suurin_luku]
+id = 115419
+checksum = '323b36bba54cb6d3e30c979196d820b4'
+
+[exercises.osa06-02_hedelmakauppa]
+id = 115420
+checksum = '26799c33d476be61325f6ae2abeac1f7'
+
+[exercises.osa06-03_matriisi]
+id = 115421
+checksum = 'd176595109fe6387fbf691c3caa7d589'
+
+[exercises.osa06-04_kurssin_tulokset_osa1]
+id = 115422
+checksum = '15d12ef56b4f33ce88c2aa61d806b84b'
+
+[exercises.osa06-05_kurssin_tulokset_osa2]
+id = 115423
+checksum = '7423df3902db4ef68ebb8fa526dcd102'
+
+[exercises.osa06-06_kurssin_tulokset_osa3]
+id = 115424
+checksum = '4d5f9b718c2db22c2f68c6a189014eb8'
+
+[exercises.osa06-07_spellchecker]
+id = 115425
+checksum = 'ca60479182c612c115ce4525fae68846'
+
+[exercises.osa06-08_reseptihaku]
+id = 115426
+checksum = '3aa9cce17b217fe3fd72b5fda7816997'
+
+[exercises.osa06-09_kaupunkipyorat]
+id = 115427
+checksum = '0d9b6a951d15e98e830f9c50b8766e74'
+
+[exercises.osa06-10_omistuskirjoitus]
+id = 115428
+checksum = '2b27adbbba89546d42429a5cb8eb4ded'
+
+[exercises.osa06-11_paivakirja]
+id = 115429
+checksum = '1c9cb04e3c24c7558c9250a6c6fbff6d'
+
+[exercises.osa06-12_aineiston_suodatus]
+id = 115430
+checksum = 'aed254d21897d30aaaf972407dcc355f'
+
+[exercises.osa06-13_henkilot_talteen]
+id = 115431
+checksum = '118f24c74cde91f741494feb35fbec10'
+
+[exercises.osa06-14_kurssin_tulokset_osa4]
+id = 115432
+checksum = '5c48ea62bc3b76b4d1e64f5c6a27d9bd'
+
+[exercises.osa06-15_sanahaku]
+id = 115433
+checksum = '55fe393ca3805cb251c025134544a845'
+
+[exercises.osa06-16_muistava_sanakirja]
+id = 115434
+checksum = '55932615d85a2d44b5c5b367ca694aaa'
+
+[exercises.osa06-17_syotteen_luku]
+id = 115435
+checksum = '285228cc115fbbfb5c36021328bd7dd9'
+
+[exercises.osa06-18_parametrien_validointi]
+id = 115436
+checksum = 'ed3acdaeb80945238f945315f7c197f1'
+
+[exercises.osa06-19_virheelliset_lottonumerot]
+id = 115437
+checksum = '5ae8ba002598ea5719085ce2b28fe45b'

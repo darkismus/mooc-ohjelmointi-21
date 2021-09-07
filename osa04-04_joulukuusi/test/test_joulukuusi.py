@@ -51,7 +51,6 @@ class KuusiTest(unittest.TestCase):
                 acual = '\n'.join(output)
                 self.assertEqual("joulukuusi!", output[0].rstrip(), f'Funktiokutsun joulukuusi({korkeus}) tulostaman ensimmäisen rivin pitäisi olla:\njoulukuusi!\nmutta se on:\n{output[0]}')
                 self.assertEqual(len(exp), len(output), f'Funktiokutsun joulukuusi({korkeus}) pitäisi tulostaa {len(exp)} riviä, nyt se tulostaa {len(output)} riviä, tulostus oli\n{acual}')
-                self.assertEqual("joulukuusi!", output[0].rstrip(), f'Funktiokutsun joulukuusi({korkeus}) tulostaman ensimmäisen rivin pitäisi olla:\njoulukuusi!\nmutta se on:\n{output[0]}')
                 acual_kuusi = "\n".join(exp)
                 for i in range(len(exp)):
                     self.assertEqual(exp[i], output[i].rstrip(), f'Funktiokutsun joulukuusi({korkeus}) tulostaman rivin {i+1} pitäisi olla:\n{exp[i]}\nmutta se on:\n{output[i]}\nOle tarkkana rivin alun väliolyöntien määrän kanssa!\nFunktiosi koko tulostus oli:\n{output_all}\noikeaoppinen joulukuusi:\n{acual_kuusi}')

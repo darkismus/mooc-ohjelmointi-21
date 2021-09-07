@@ -9,7 +9,7 @@ from inspect import getsource
 exercise = 'src.lahtolaskenta'
 
 @points('3.lahtolaskenta')
-class LuvutTest(unittest.TestCase):
+class LahtolaskentaTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         with patch('builtins.input', side_effect=[1] + ["2"] * 10):
@@ -33,8 +33,8 @@ class LuvutTest(unittest.TestCase):
                 self.assertTrue(len(output_all)>0, f"Ohjelmasi ei tulosta mitään syötteellä {luku}")
                 self.assertEqual(luku+2, len(output), f"Ohjelmasi tulisi tulostaa {luku+2} riviä lukuja syötteellä {luku}, nyt se tulostaa {len(output)} riviä:\n{output_all}")
 
-                self.assertEqual("Valmiina?", output[0], f"ensimmäisen tulostettavan rivin pitäisi olla \nValmiina?\nVse on:\nV{output[0]}")
-                self.assertEqual("Nyt!", output[len(output)-1], f"viimeisen tulostettavan rivin pitäisi olla\nVNyt!\nVse on:{output[len(output)-1]}")
+                self.assertEqual("Valmiina?", output[0], f"ensimmäisen tulostettavan rivin pitäisi olla \nValmiina?\nse on:\nV{output[0]}")
+                self.assertEqual("Nyt!", output[len(output)-1], f"viimeisen tulostettavan rivin pitäisi olla\nNyt!\nse on:{output[len(output)-1]}")
 
                 for i in range(1, luku+1):
                     self.assertEqual(str(luku-i+1), output[i], f"rivin {i+1} tulostus väärin kun syöte on {luku}\ohjelmasi tulostaa:\n{output_all}")

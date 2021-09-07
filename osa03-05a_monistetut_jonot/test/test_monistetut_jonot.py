@@ -12,7 +12,7 @@ def format_tuple(d : tuple):
     return str(d).replace("'","")
 
 @points('2.monistetut_jonot')
-class AakkosjarjestysKeskimmainenTest(unittest.TestCase):
+class MonistetutJonotTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         with patch('builtins.input', side_effect =['a', '1']):
